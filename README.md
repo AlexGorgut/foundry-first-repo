@@ -4,11 +4,10 @@
 - [Getting Started](#getting-started)
   - [Requirements](#requirements)
   - [Quickstart](#quickstart)
-    - [Optional Gitpod](#optional-gitpod)
 - [Usage](#usage)
   - [Testing](#testing)
     - [Test Coverage](#test-coverage)
-- [Deployment to a testnet or mainnet](#deployment-to-a-testnet-or-mainnet)
+- [Deployment to a testnet](#deployment-to-a-testnet-or-mainnet)
   - [Scripts](#scripts)
     - [Withdraw](#withdraw)
   - [Estimate gas](#estimate-gas)
@@ -28,8 +27,8 @@
 ## Quickstart
 
 ```
-git clone https://github.com/Cyfrin/foundry-fund-me-f23
-cd foundry-fund-me-f23
+git clone https://github.com/AlexGorgut/foundry-first-repo
+cd foundry-first-repo
 forge build
 ```
 
@@ -78,19 +77,7 @@ forge coverage
 ```
 
 
-# Deployment to a testnet or mainnet
-
-1. Setup environment variables
-
-You'll want to set your `SEPOLIA_RPC_URL` and `PRIVATE_KEY` as environment variables. You can add them to a `.env` file, similar to what you see in `.env.example`.
-
-Optionally, add your `ETHERSCAN_API_KEY` if you want to verify your contract on [Etherscan](https://etherscan.io/).
-
-1. Get testnet ETH
-
-Head over to [faucets.chain.link](https://faucets.chain.link/) and get some tesnet ETH. You should see the ETH show up in your metamask.
-
-3. Deploy
+# Deployment to a testnet 
 
 ```
 forge script script/DeployFundMe.s.sol --rpc-url $SEPOLIA_RPC_URL --private-key $PRIVATE_KEY --broadcast --verify --etherscan-api-key $ETHERSCAN_API_KEY
